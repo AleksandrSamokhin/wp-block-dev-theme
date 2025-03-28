@@ -83,3 +83,115 @@ function wp_block_dev_mimes($mimes) {
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
 }
+
+/*--------------------------------------------------------------
+# Block Styles
+--------------------------------------------------------------*/
+// Post Template Grid
+register_block_style(
+	'core/post-template',
+	array(
+		'name' 				 => 'wp-block-dev-post-grid-row-gap-20',
+		'label'        => esc_html__( 'Row gap 20', 'wp-block-dev' ),
+		'inline_style' => '.is-style-wp-block-dev-post-grid-row-gap-20 { row-gap: 20px !important; }'
+	)
+);
+
+register_block_style(
+	'core/post-template',
+	array(
+		'name' 				 => 'wp-block-dev-post-grid-row-gap-40',
+		'label'        => esc_html__( 'Row gap 40', 'wp-block-dev' ),
+		'inline_style' => '.is-style-wp-block-dev-post-grid-row-gap-40 { row-gap: 40px !important; }'
+	)
+);
+
+register_block_style(
+	'core/post-template',
+	array(
+		'name' 				 => 'wp-block-dev-post-grid-gap-30',
+		'label'        => esc_html__( 'Gap 30', 'wp-block-dev' ),
+		'inline_style' => '
+			.is-style-wp-block-dev-post-grid-gap-30 {
+				column-gap: 30px !important;
+
+				@media only screen and (min-width: 782px) {
+					row-gap: 30px !important;
+				}					
+			}			
+		'
+	)
+);
+
+register_block_style(
+	'core/post-template',
+	array(
+		'name' 				 => 'wp-block-dev-post-grid-gap-40',
+		'label'        => esc_html__( 'Gap 40', 'wp-block-dev' ),
+		'inline_style' => '.is-style-wp-block-dev-post-grid-gap-40 { column-gap: 40px !important; }'
+	)
+);
+
+register_block_style(
+	'core/post-template',
+	array(
+		'name' 				 => 'wp-block-dev-post-grid-gap-64',
+		'label'        => esc_html__( 'Gap 64', 'wp-block-dev' ),
+		'inline_style' => '.is-style-wp-block-dev-post-grid-gap-64 { column-gap: 64px !important; }'
+	)
+);
+
+// Read More	
+register_block_style(
+	'core/read-more',
+	array(
+		'name' 				 => 'wp-block-dev-read-more-cover',
+		'label'        => esc_html__( 'Cover', 'wp-block-dev' ),
+		'inline_style' => '.is-style-wp-block-dev-read-more-cover {
+			font-size: 0;
+			display: block;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			left: 0;
+			right: 0;
+		}'
+	)
+);
+
+// Cover
+register_block_style(
+	'core/cover',
+	array(
+		'name' 				 => 'ona-hover-scale',
+		'label'        => esc_html__( 'Hover scale', 'ona' ),
+		'inline_style' => '.is-style-ona-hover-scale {
+			overflow: hidden;
+		}
+		.is-style-ona-hover-scale img {
+			transition: transform 0.4s var(--ona-transition);
+			will-change: transform;
+		}
+		.is-style-ona-hover-scale:hover img {
+			transform: scale(1.05);
+		}'
+	)
+);
+
+register_block_style(
+	'core/cover',
+	array(
+		'name' 				 => 'ona-full-link',
+		'label'        => esc_html__( 'Full link', 'ona' ),
+		'inline_style' => '.is-style-ona-full-link a::after {
+			display:block;
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			content:"";
+		}'
+	)
+);
