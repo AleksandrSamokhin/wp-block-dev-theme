@@ -268,6 +268,10 @@
         }
       }
     },
+    "color": {
+      "background": "var(--wp--preset--color--background)",
+      "text": "var(--wp--preset--color--text-regular)"
+    },
     "elements": {
       "button": {
         "border": {
